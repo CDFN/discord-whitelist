@@ -1,0 +1,26 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    maven {
+        url 'https://storehouse.okaeri.eu/repository/maven-public/'
+    }
+    maven {
+        url 'https://m2.dv8tion.net/releases'
+    }
+}
+
+dependencies {
+    implementation 'eu.okaeri:okaeri-configs-hjson:2.7.20'
+    implementation 'mysql:mysql-connector-java:8.0.25'
+
+    implementation 'com.zaxxer:HikariCP:4.0.3'
+    implementation("net.dv8tion:JDA:4.3.0_293") {
+        exclude module: 'opus-java'
+    }
+}
+
+application {
+    mainClass = 'io.github.cdfn.rankbridge.entrypoint.Main'
+}

@@ -1,0 +1,4 @@
+rootProject.name = 'discord-rankbridge'
+
+include 'rankbridge-bukkit'
+include 'rankbridge-discordbot'

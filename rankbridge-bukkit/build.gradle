@@ -1,0 +1,24 @@
+plugins {
+    id 'kr.entree.spigradle' version '2.2.4'
+}
+
+repositories {
+    papermc()
+    maven {
+        url 'https://storehouse.okaeri.eu/repository/maven-public/'
+    }
+
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:1.17-R0.1-SNAPSHOT'
+    implementation 'com.zaxxer:HikariCP:4.0.3'
+    implementation 'eu.okaeri:okaeri-configs-hjson:2.7.20'
+}
+
+spigot {
+    name = 'DiscordRankBridge'
+    version = project.version
+    authors = ['CDFN']
+    apiVersion = '1.17'
+}
